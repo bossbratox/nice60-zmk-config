@@ -48,7 +48,7 @@
 	&kp C_SLEEP &kp C_QUIT &trans &trans &trans &trans &trans &trans &kp K_WWW &trans &trans &trans &trans &kp END
 	&kp C_RESET &trans &trans &trans &kp K_FIND &trans &trans &trans &kp C_AL_TEXT_EDITOR &trans &trans &trans &kp K_EXEC 
 	&trans &trans &trans &trans &trans &trans &trans &kp C_AL_MAIL &trans &trans &trans &kp C_AC_REFRESH 
-	&trans &trans &trans &kp C_AC_SEARCH &trans &kp C_MENU  &rgb_ug RGB_EFF &rgb_ug RGB_TOG
+	&trans &trans &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_SEARCH &trans &kp C_MENU  &rgb_ug RGB_EFF &rgb_ug RGB_TOG
             >;
 		};
 	};
