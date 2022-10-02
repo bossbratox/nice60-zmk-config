@@ -41,14 +41,14 @@
 // | SLEEP | QUIT |  |    |   |   |    |    |  WEB BROWSER  |    |     |   |	 | END	 | 
 // | RESET |   |    |   |  FIND  |      |      |       |    TEXT EDITOR   |     |     |      | EXECUTE |
 // | |  | 	 |	 |   |  |   | EMAIL  |  |     |     | REFRESH  |
-// | |  | |            SEARCH               |  | MENU |  RGB EFF | RGB_TOG  |
+// | INSERT |  | SHOW WINDOWS |            SEARCH               |  | MENU |  RGB EFF | RGB_TOG  |
 // ------------------------------------------------------------------------------------------------
 			bindings = <
 	&kp C_POWER &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10  &kp C_VOL_DN &kp C_VOL_UP &kp K_UNDO
 	&kp C_SLEEP &kp C_QUIT &trans &trans &trans &trans &trans &trans &kp K_WWW &trans &trans &trans &trans &kp END
 	&kp C_RESET &trans &trans &trans &kp K_FIND &trans &trans &trans &kp C_AL_TEXT_EDITOR &trans &trans &trans &kp K_EXEC 
 	&trans &trans &trans &trans &trans &trans &trans &kp C_AL_MAIL &trans &trans &trans &kp C_AC_REFRESH 
-	&trans &trans &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_SEARCH &trans &kp C_MENU  &rgb_ug RGB_EFF &rgb_ug RGB_TOG
+	&kp INSERT &trans &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_SEARCH &trans &kp C_MENU  &rgb_ug RGB_EFF &rgb_ug RGB_TOG
             >;
 		};
 	};
