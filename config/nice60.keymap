@@ -40,12 +40,6 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N7 &kp N0 &kp N2 &kp N1 &kp N9 &kp N8 &kp N7>;
         };
-        wishlist: wishlist {
-            compatible = "zmk,behavior-macro";
-            label = "wishlist";
-            #binding-cells = <0>;
-            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp A &kp M &kp A &kp Z &kp O &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp H &kp Z &kp FSLH &kp W &kp I &kp S &kp H &kp L &kp I &kp S &kp T &kp FSLH &kp L &kp S &kp FSLH &kp N2 &kp LS(J) &kp LS(P) &kp LS(K) &kp LS(Q) &kp LS(Q) &kp LS(G) &kp LS(L) &kp LS(C) &kp LS(G) &kp LS(F) &kp LS(H) &kp LS(W)>;
-        };
     };
 
     keymap {
