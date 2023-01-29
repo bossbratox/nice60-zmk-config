@@ -15,6 +15,15 @@
 #define secret 1
 
 / {
+    macros {
+        gmail: gmail {
+            compatible = "zmk,behavior-macro";
+            label = "gmail";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp M &kp C &kp L &kp A &kp U &kp D &kp I &kp A &kp C &kp H &kp O &kp X &kp O &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
