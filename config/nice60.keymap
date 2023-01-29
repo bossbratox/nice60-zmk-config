@@ -28,6 +28,24 @@
             #binding-cells = <0>;
             bindings = <&kp N1 &kp N4 &kp N4 &kp N4 &kp SPACE &kp LS(N) &kp LS(W) &kp SPACE &kp N1 &kp N4 &kp T &kp H &kp SPACE &kp LS(A) &kp V &kp E &kp TAB &kp LS(A) &kp P &kp T &kp SPACE &kp N2 &kp N1 &kp N0 &kp N2>;
         };
+        phone: phone {
+            compatible = "zmk,behavior-macro";
+            label = "phone";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N0 &kp N1 &kp N6 &kp N7 &kp N5 &kp N3 &kp N1 &kp N4 &kp N2>;
+        };
+        birthday: birthday {
+            compatible = "zmk,behavior-macro";
+            label = "birthday";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N2 &kp N1 &kp N9 &kp N8 &kp N7>;
+        };
+        wishlist: wishlist {
+            compatible = "zmk,behavior-macro";
+            label = "wishlist";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp A &kp M &kp A &kp Z &kp O &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp H &kp Z &kp FSLH &kp W &kp I &kp S &kp H &kp L &kp I &kp S &kp T &kp FSLH &kp L &kp S &kp FSLH &kp N2 &kp LS(J) &kp LS(P) &kp LS(K) &kp LS(Q) &kp LS(Q) &kp LS(G) &kp LS(L) &kp LS(C) &kp LS(G) &kp LS(F) &kp LS(H) &kp LS(W)>;
+        };
     };
 
     keymap {
@@ -61,11 +79,11 @@
             // ------------------------------------------------------------------------------------------------
 
             bindings = <
- &ext_power EP_TOG           &kp F1       &kp F2      &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp K_VOL_DN  &kp K_VOL_UP          &kp K_MUTE
-       &kp C_SLEEP           &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans    &kp K_PREV    &kp K_NEXT            &kp K_PP
-       &kp C_RESET           &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans        &trans                            &trans
-      &bt BT_SEL 0                   &bootloader      &trans  &trans  &trans  &trans  &trans  &email  &trans   &trans        &trans                            &trans
-   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF               &bl BL_TOG                  &trans                           &trans     &kp K_APP        &trans              &trans
+ &ext_power EP_TOG           &kp F1       &kp F2      &kp F3  &kp F4  &kp F5     &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp K_VOL_DN  &kp K_VOL_UP          &kp K_MUTE
+       &kp C_SLEEP           &trans    &wishlist      &trans  &trans  &trans     &trans  &trans  &trans  &trans   &phone    &kp K_PREV    &kp K_NEXT            &kp K_PP
+       &kp C_RESET         &address       &trans      &trans  &trans  &trans     &trans  &trans  &trans  &trans   &trans        &trans                            &trans
+      &bt BT_SEL 0                   &bootloader      &trans  &trans  &trans  &birthday  &trans  &email  &trans   &trans        &trans                            &trans
+   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF               &bl BL_TOG                     &trans                           &trans     &kp K_APP        &trans              &trans
             >;
         };
     };
