@@ -3,54 +3,55 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/reset.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/backlight.h>
+
 #define default 0
 #define secret 1
 
 / {
-	keymap {
-		compatible = "zmk,keymap";			    
-		
-		default_layer {
-// ------------------------------------------------------------------------------------------
-// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |
-// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |
-// | CAPSLOCK  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
-// |  SHIFT  |  Z  |  X |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      UP       |
-// |  LCTL  |  ALT  |  LMETA  |            SPACE              |  MO 1  |  LEFT  |  DOWN |  RIGHT  |
-// ------------------------------------------------------------------------------------------
-			bindings = <
-	&gresc  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL  &kp BSPC
-	&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT	&kp RBKT	&kp BSLH
-	&sk CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET
-	&kp LSHFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH              &kp UP
-	&kp LEFT_CONTROL	&kp LALT	&kp LGUI	&kp SPACE	&mo 1 	&kp LEFT	&kp DOWN	&kp RIGHT
-			>;
-		}; 
+    keymap {
+        compatible = "zmk,keymap";
 
-		secret_layer {
-// ------------------------------------------------------------------------------------------------
-// | PWR   | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8 | F9 | F10 | VOL DN | VOL UP | MUTE |
-// | SLEEP | QUIT |  |    |   |   |    |    |  WEB BROWSER  |    |     | PREVIOUS |NEXT | PLAY/PAUSE| 
-// | RESET |   |    |   |  FIND  |      |      |       |    TEXT EDITOR   |     |     |      | EXECUTE |
-// | RESET KEYBOARD | BT CLEAR  | 	 |	 |   |  |   | EMAIL  |  |     |     | BOOTLOADER |
-// | RGB_TOG| RGB EFF | BL TOG |  SHOW WINDOWS |  | MENU |   | SNAPSHOT  |
-// ------------------------------------------------------------------------------------------------
-			bindings = <
-	&kp C_POWER &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10  &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE
-	&kp C_SLEEP &kp C_QUIT &kp UP &kp C_AL_FILES &trans &trans &trans &trans &kp C_AL_WWW &trans &trans &kp C_PREVIOUS &kp C_NEXT &kp C_PP
-	&kp C_RESET &kp LEFT &kp DOWN &kp RIGHT &kp C_AC_FIND &trans &trans &trans &kp C_AL_TEXT_EDITOR &trans &trans &trans &kp K_EXEC 
-	&reset &bt BT_CLR &bootloader &trans &trans &trans &trans &kp C_AL_MAIL &trans &trans &trans &trans
-	&rgb_ug RGB_TOG &rgb_ug RGB_EFF &bl BL_TOG &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &trans &kp K_APP &trans &kp C_SNAPSHOT
+        default_layer {
+            // ------------------------------------------------------------------------------------------
+            // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |
+            // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |
+            // | CAPSLOCK  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
+            // |  SHIFT  |  Z  |  X |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      UP       |
+            // |  LCTL  |  ALT  |  LMETA  |            SPACE              |  MO 1  |  LEFT  |  DOWN |  RIGHT  |
+            // ------------------------------------------------------------------------------------------
+
+            bindings = <
+           &gresc    &kp N1  &kp N2    &kp N3  &kp N4  &kp N5     &kp N6  &kp N7  &kp N8     &kp N9    &kp N0  &kp MINUS  &kp EQUAL           &kp BSPC
+          &kp TAB     &kp Q   &kp W     &kp E   &kp R   &kp T      &kp Y   &kp U   &kp I      &kp O     &kp P   &kp LBKT   &kp RBKT           &kp BSLH
+         &sk CLCK     &kp A   &kp S     &kp D   &kp F   &kp G      &kp H   &kp J   &kp K      &kp L  &kp SEMI    &kp SQT                       &kp RET
+        &kp LSHFT             &kp Z     &kp X   &kp C   &kp V      &kp B   &kp N   &kp M  &kp COMMA   &kp DOT   &kp FSLH                        &kp UP
+ &kp LEFT_CONTROL  &kp LALT          &kp LGUI                  &kp SPACE                                &mo 1   &kp LEFT   &kp DOWN          &kp RIGHT
             >;
-		};
-	};
+        };
+
+        secret_layer {
+            // ------------------------------------------------------------------------------------------------
+            // | PWR   | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8 | F9 | F10 | VOL DN | VOL UP | MUTE |
+            // | SLEEP | QUIT |  |    |   |   |    |    |  WEB BROWSER  |    |     | PREVIOUS |NEXT | PLAY/PAUSE| 
+            // | RESET |   |    |   |  FIND  |      |      |       |    TEXT EDITOR   |     |     |      | EXECUTE |
+            // | RESET KEYBOARD | BT CLEAR  | 	 |	 |   |  |   | EMAIL  |  |     |     | BOOTLOADER |
+            // | RGB_TOG| RGB EFF | BL TOG |  SHOW WINDOWS |  | MENU |   | SNAPSHOT  |
+            // ------------------------------------------------------------------------------------------------
+
+            bindings = <
+ &ext_power EP_TOG           &kp F1       &kp F2      &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp K_VOL_DN  &kp K_VOL_UP          &kp K_MUTE
+       &kp C_SLEEP           &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans    &kp K_PREV    &kp K_NEXT            &kp K_PP
+       &kp C_RESET           &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans        &trans                            &trans
+      &bt BT_SEL 0                   &bootloader      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans        &trans                            &trans
+   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF               &bl BL_TOG                  &trans                           &trans     &kp K_APP        &trans              &trans
+            >;
+        };
+    };
 };
